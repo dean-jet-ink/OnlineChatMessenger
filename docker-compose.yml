@@ -1,0 +1,14 @@
+version: "3"
+services:
+  python:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: python
+    container_name: python
+    volumes:
+      - .:/app/
+    ports:
+      - 8000:8000
+    stdin_open: true
+    tty: true
